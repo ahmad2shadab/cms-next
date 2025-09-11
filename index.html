@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-Nivaran - Ex-Employee Grievance Management System</title>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              border: 'hsl(214.3 31.8% 91.4%)',
+              input: 'hsl(214.3 31.8% 91.4%)',
+              ring: 'hsl(222.2 84% 4.9%)',
+              background: 'hsl(0 0% 100%)',
+              foreground: 'hsl(222.2 84% 4.9%)',
+              primary: {
+                DEFAULT: 'hsl(222.2 47.4% 11.2%)',
+                foreground: 'hsl(210 40% 98%)',
+              },
+              secondary: {
+                DEFAULT: 'hsl(210 40% 96%)',
+                foreground: 'hsl(222.2 84% 4.9%)',
+              },
+              destructive: {
+                DEFAULT: 'hsl(0 84.2% 60.2%)',
+                foreground: 'hsl(210 40% 98%)',
+              },
+              muted: {
+                DEFAULT: 'hsl(210 40% 96%)',
+                foreground: 'hsl(215.4 16.3% 46.9%)',
+              },
+              accent: {
+                DEFAULT: 'hsl(210 40% 96%)',
+                foreground: 'hsl(222.2 84% 4.9%)',
+              },
+              popover: {
+                DEFAULT: 'hsl(0 0% 100%)',
+                foreground: 'hsl(222.2 84% 4.9%)',
+              },
+              card: {
+                DEFAULT: 'hsl(0 0% 100%)',
+                foreground: 'hsl(222.2 84% 4.9%)',
+              },
+            },
+            borderRadius: {
+              lg: 'var(--radius)',
+              md: 'calc(var(--radius) - 2px)',
+              sm: 'calc(var(--radius) - 4px)',
+            },
+          },
+        },
+        darkMode: 'class',
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="min-h-screen bg-background font-sans antialiased">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Main Layout -->
+    <div class="flex">
+      <!-- Sidebar -->
+      <!-- <div id="sidebar-container"></div> -->
+
+      <!-- Main Content -->
+      <main class="flex-1 transition-all duration-300 ease-in-out">
+        <!-- Hero Section -->
+        <section
+          class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20 lg:py-32"
+        >
+          <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-4xl text-center">
+              <!-- Removed System Online indicator -->
+
+              <h1
+                class="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl"
+              >
+                Welcome to
+                <span
+                  class="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
+                >
+                  e-Nivaran
+                </span>
+              </h1>
+
+              <p class="mt-6 text-lg leading-8 text-slate-600 sm:text-xl">
+                A comprehensive digital platform designed to efficiently handle
+                and resolve grievances for ex-employees of Coal India Limited.
+                Experience seamless complaint registration, tracking, and
+                resolution.
+              </p>
+
+              <div
+                class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6"
+              >
+                <button
+                  onclick="navigateToSection('user')"
+                  class="group relative overflow-hidden rounded-lg bg-slate-900 px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-slate-800 hover:shadow-xl hover:scale-105"
+                >
+                  <div class="relative flex items-center space-x-2">
+                    <i class="fas fa-plus-circle"></i>
+                    <span class="font-medium">Register New Grievance</span>
+                  </div>
+                  <div
+                    class="absolute inset-0 -z-10 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  ></div>
+                </button>
+
+                <button
+                  onclick="navigateToSection('admin')"
+                  class="group flex items-center space-x-2 rounded-lg border border-slate-300 bg-white px-8 py-4 text-slate-700 shadow-sm transition-all duration-300 hover:border-slate-400 hover:bg-slate-50 hover:shadow-md"
+                >
+                  <i class="fas fa-chart-bar"></i>
+                  <span class="font-medium">View Dashboard</span>
+                  <i
+                    class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                  ></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Elements -->
+          <div
+            class="absolute top-10 left-10 h-20 w-20 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 opacity-20 blur-xl animate-pulse"
+          ></div>
+          <div
+            class="absolute bottom-10 right-10 h-16 w-16 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 opacity-20 blur-xl animate-pulse delay-1000"
+          ></div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-white">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+              <h2
+                class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+              >
+                Why Choose e-Nivaran?
+              </h2>
+              <p class="mt-4 text-lg text-slate-600">
+                Experience efficient grievance management with our comprehensive
+                digital solution
+              </p>
+            </div>
+
+            <div
+              class="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+            >
+              <!-- Feature 1 -->
+              <div
+                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
+              >
+                <div
+                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg"
+                >
+                  <i class="fas fa-clock text-2xl"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-slate-900">
+                  24/7 Accessibility
+                </h3>
+                <p class="mt-3 text-slate-600 leading-relaxed">
+                  Submit and track your grievances anytime, anywhere with our
+                  always-available digital platform.
+                </p>
+              </div>
+
+              <!-- Feature 2 -->
+              <div
+                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
+              >
+                <div
+                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg"
+                >
+                  <i class="fas fa-chart-line text-2xl"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-slate-900">
+                  Real-time Tracking
+                </h3>
+                <p class="mt-3 text-slate-600 leading-relaxed">
+                  Monitor your grievance status in real-time with detailed
+                  progress updates and notifications.
+                </p>
+              </div>
+
+              <!-- Feature 3 -->
+              <div
+                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
+              >
+                <div
+                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-lg"
+                >
+                  <i class="fas fa-shield-alt text-2xl"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-slate-900">
+                  Secure & Confidential
+                </h3>
+                <p class="mt-3 text-slate-600 leading-relaxed">
+                  Your information is protected with enterprise-grade security
+                  and complete confidentiality.
+                </p>
+              </div>
+
+              <!-- Feature 4 -->
+              <div
+                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
+              >
+                <div
+                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg"
+                >
+                  <i class="fas fa-users text-2xl"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-slate-900">
+                  Expert Support
+                </h3>
+                <p class="mt-3 text-slate-600 leading-relaxed">
+                  Get assistance from our dedicated support team specialized in
+                  grievance resolution.
+                </p>
+              </div>
+
+              <!-- Feature 5 -->
+              <div
+                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
+              >
+                <div
+                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 to-pink-600 text-white shadow-lg"
+                >
+                  <i class="fas fa-mobile-alt text-2xl"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-slate-900">
+                  Mobile Friendly
+                </h3>
+                <p class="mt-3 text-slate-600 leading-relaxed">
+                  Fully responsive design that works seamlessly across all
+                  devices and screen sizes.
+                </p>
+              </div>
+
+              <!-- Feature 6 -->
+              <div
+                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
+              >
+                <div
+                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-lg"
+                >
+                  <i class="fas fa-bolt text-2xl"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-slate-900">
+                  Quick Resolution
+                </h3>
+                <p class="mt-3 text-slate-600 leading-relaxed">
+                  Streamlined processes ensure faster grievance processing and
+                  resolution times.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-20 bg-slate-50">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+              <div class="text-center">
+                <div
+                  class="text-4xl font-bold text-slate-900 lg:text-5xl"
+                  id="stat1"
+                >
+                  0
+                </div>
+                <div class="mt-2 text-sm text-slate-600 lg:text-base">
+                  Grievances Resolved
+                </div>
+              </div>
+              <div class="text-center">
+                <div
+                  class="text-4xl font-bold text-slate-900 lg:text-5xl"
+                  id="stat2"
+                >
+                  0
+                </div>
+                <div class="mt-2 text-sm text-slate-600 lg:text-base">
+                  Satisfaction Rate
+                </div>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl font-bold text-slate-900 lg:text-5xl">
+                  24/7
+                </div>
+                <div class="mt-2 text-sm text-slate-600 lg:text-base">
+                  System Availability
+                </div>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl font-bold text-slate-900 lg:text-5xl">
+                  7 Days
+                </div>
+                <div class="mt-2 text-sm text-slate-600 lg:text-base">
+                  Average Resolution
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section
+          class="py-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900"
+        >
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+              <h2
+                class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+              >
+                Ready to Get Started?
+              </h2>
+              <p class="mt-4 text-lg text-slate-300">
+                Join thousands of satisfied users who have resolved their
+                grievances through our platform
+              </p>
+              <div
+                class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6"
+              >
+                <button
+                  onclick="navigateToSection('user')"
+                  class="group relative overflow-hidden rounded-lg bg-white px-8 py-4 text-slate-900 shadow-lg transition-all duration-300 hover:bg-slate-100 hover:shadow-xl hover:scale-105"
+                >
+                  <div class="relative flex items-center space-x-2">
+                    <i class="fas fa-edit"></i>
+                    <span class="font-medium">Submit Your Grievance</span>
+                  </div>
+                </button>
+
+                <button
+                  onclick="navigateToSection('user')"
+                  class="group flex items-center space-x-2 rounded-lg border border-slate-600 bg-transparent px-8 py-4 text-white transition-all duration-300 hover:border-slate-400 hover:bg-slate-800"
+                >
+                  <i class="fas fa-search"></i>
+                  <span class="font-medium">Track Existing Grievance</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+      // Load components
+      document.addEventListener('DOMContentLoaded', function () {
+        loadComponent('header.html', 'header-container');
+        loadComponent('sidebar.html', 'sidebar-container');
+        loadComponent('footer.html', 'footer-container');
+
+        // Animate stats
+        animateStats();
+      });
+
+      function loadComponent(file, containerId) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(containerId).innerHTML = data;
+            if (file === 'header.html') initializeHeader();
+            if (file === 'sidebar.html') initializeSidebar();
+          })
+          .catch((error) => console.error('Error loading component:', error));
+      }
+
+      function animateStats() {
+        const stat1 = document.getElementById('stat1');
+        const stat2 = document.getElementById('stat2');
+
+        animateNumber(stat1, 1000, '+');
+        animateNumber(stat2, 95, '%');
+      }
+
+      function animateNumber(element, target, suffix = '') {
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          element.textContent = Math.floor(current) + suffix;
+        }, 20);
+      }
+
+      // Update navigateToSection logic in your script.js
+      function navigateToSection(section) {
+        if (section === 'user') {
+          // Redirect to User form/page
+          window.location.href = '/register.html';
+        } else if (section === 'admin') {
+          // Redirect to Admin dashboard/page
+          window.location.href = '/dashboard.html';
+        }
+      }
+    </script>
+  </body>
+</html>
