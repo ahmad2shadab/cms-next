@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>e-Nivaran - Ex-Employee Grievance Management System</title>
@@ -62,297 +62,273 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-
-  <body class="min-h-screen bg-background font-sans antialiased">
+<body class="min-h-screen bg-slate-50">
     <!-- Header -->
     <div id="header-container"></div>
 
     <!-- Main Layout -->
     <div class="flex">
       <!-- Sidebar -->
-      <!-- <div id="sidebar-container"></div> -->
+      <div id="sidebar-container"></div>
 
       <!-- Main Content -->
       <main class="flex-1 transition-all duration-300 ease-in-out">
-        <!-- Hero Section -->
-        <section
-          class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20 lg:py-32"
-        >
-          <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-4xl text-center">
-              <!-- Removed System Online indicator -->
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <!-- Responsive wrapper -->
+          <div class="flex flex-col lg:flex-row lg:items-start lg:gap-12 min-h-screen lg:py-8">
 
-              <h1
-                class="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl"
-              >
-                Welcome to
-                <span
-                  class="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
-                >
-                  e-Nivaran
-                </span>
-              </h1>
-
-              <p class="mt-6 text-lg leading-8 text-slate-600 sm:text-xl">
-                A comprehensive digital platform designed to efficiently handle
-                and resolve grievances for ex-employees of Coal India Limited.
-                Experience seamless complaint registration, tracking, and
-                resolution.
-              </p>
-
-              <div
-                class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6"
-              >
-                <button
-                  onclick="navigateToSection('user')"
-                  class="group relative overflow-hidden rounded-lg bg-slate-900 px-8 py-4 text-white shadow-lg transition-all duration-300 hover:bg-slate-800 hover:shadow-xl hover:scale-105"
-                >
-                  <div class="relative flex items-center space-x-2">
-                    <i class="fas fa-plus-circle"></i>
-                    <span class="font-medium">Register New Grievance</span>
+            <!-- LOGIN (top on mobile, right on desktop) -->
+            <aside class="order-1 lg:order-2 lg:w-1/3 w-full flex items-center justify-center py-8 lg:py-0">
+              <div class="bg-white rounded-xl shadow-lg w-full max-w-md mx-4 overflow-hidden">
+                <!-- Header & Progress -->
+                <div class="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 text-white">
+                  <div class="flex items-center space-x-3">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20">
+                      <i class="fas fa-user text-white"></i>
+                    </div>
+                    <div>
+                      <h2 class="text-lg font-semibold">User Login</h2>
+                      <p id="stepIndicator" class="text-sm text-blue-100">Step 1 of 3</p>
+                    </div>
                   </div>
-                  <div
-                    class="absolute inset-0 -z-10 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  ></div>
-                </button>
-
-                <button
-                  onclick="navigateToSection('admin')"
-                  class="group flex items-center space-x-2 rounded-lg border border-slate-300 bg-white px-8 py-4 text-slate-700 shadow-sm transition-all duration-300 hover:border-slate-400 hover:bg-slate-50 hover:shadow-md"
-                >
-                  <i class="fas fa-chart-bar"></i>
-                  <span class="font-medium">View Dashboard</span>
-                  <i
-                    class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                  ></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Floating Elements -->
-          <div
-            class="absolute top-10 left-10 h-20 w-20 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 opacity-20 blur-xl animate-pulse"
-          ></div>
-          <div
-            class="absolute bottom-10 right-10 h-16 w-16 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 opacity-20 blur-xl animate-pulse delay-1000"
-          ></div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="py-20 bg-white">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-              <h2
-                class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
-              >
-                Why Choose e-Nivaran?
-              </h2>
-              <p class="mt-4 text-lg text-slate-600">
-                Experience efficient grievance management with our comprehensive
-                digital solution
-              </p>
-            </div>
-
-            <div
-              class="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-            >
-              <!-- Feature 1 -->
-              <div
-                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
-              >
-                <div
-                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg"
-                >
-                  <i class="fas fa-clock text-2xl"></i>
                 </div>
-                <h3 class="mt-6 text-xl font-semibold text-slate-900">
-                  24/7 Accessibility
-                </h3>
-                <p class="mt-3 text-slate-600 leading-relaxed">
-                  Submit and track your grievances anytime, anywhere with our
-                  always-available digital platform.
-                </p>
-              </div>
-
-              <!-- Feature 2 -->
-              <div
-                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
-              >
-                <div
-                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg"
-                >
-                  <i class="fas fa-chart-line text-2xl"></i>
-                </div>
-                <h3 class="mt-6 text-xl font-semibold text-slate-900">
-                  Real-time Tracking
-                </h3>
-                <p class="mt-3 text-slate-600 leading-relaxed">
-                  Monitor your grievance status in real-time with detailed
-                  progress updates and notifications.
-                </p>
-              </div>
-
-              <!-- Feature 3 -->
-              <div
-                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
-              >
-                <div
-                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-lg"
-                >
-                  <i class="fas fa-shield-alt text-2xl"></i>
-                </div>
-                <h3 class="mt-6 text-xl font-semibold text-slate-900">
-                  Secure & Confidential
-                </h3>
-                <p class="mt-3 text-slate-600 leading-relaxed">
-                  Your information is protected with enterprise-grade security
-                  and complete confidentiality.
-                </p>
-              </div>
-
-              <!-- Feature 4 -->
-              <div
-                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
-              >
-                <div
-                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg"
-                >
-                  <i class="fas fa-users text-2xl"></i>
-                </div>
-                <h3 class="mt-6 text-xl font-semibold text-slate-900">
-                  Expert Support
-                </h3>
-                <p class="mt-3 text-slate-600 leading-relaxed">
-                  Get assistance from our dedicated support team specialized in
-                  grievance resolution.
-                </p>
-              </div>
-
-              <!-- Feature 5 -->
-              <div
-                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
-              >
-                <div
-                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 to-pink-600 text-white shadow-lg"
-                >
-                  <i class="fas fa-mobile-alt text-2xl"></i>
-                </div>
-                <h3 class="mt-6 text-xl font-semibold text-slate-900">
-                  Mobile Friendly
-                </h3>
-                <p class="mt-3 text-slate-600 leading-relaxed">
-                  Fully responsive design that works seamlessly across all
-                  devices and screen sizes.
-                </p>
-              </div>
-
-              <!-- Feature 6 -->
-              <div
-                class="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:shadow-lg hover:ring-slate-300"
-              >
-                <div
-                  class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-lg"
-                >
-                  <i class="fas fa-bolt text-2xl"></i>
-                </div>
-                <h3 class="mt-6 text-xl font-semibold text-slate-900">
-                  Quick Resolution
-                </h3>
-                <p class="mt-3 text-slate-600 leading-relaxed">
-                  Streamlined processes ensure faster grievance processing and
-                  resolution times.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="py-20 bg-slate-50">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-              <div class="text-center">
-                <div
-                  class="text-4xl font-bold text-slate-900 lg:text-5xl"
-                  id="stat1"
-                >
-                  0
-                </div>
-                <div class="mt-2 text-sm text-slate-600 lg:text-base">
-                  Grievances Resolved
-                </div>
-              </div>
-              <div class="text-center">
-                <div
-                  class="text-4xl font-bold text-slate-900 lg:text-5xl"
-                  id="stat2"
-                >
-                  0
-                </div>
-                <div class="mt-2 text-sm text-slate-600 lg:text-base">
-                  Satisfaction Rate
-                </div>
-              </div>
-              <div class="text-center">
-                <div class="text-4xl font-bold text-slate-900 lg:text-5xl">
-                  24/7
-                </div>
-                <div class="mt-2 text-sm text-slate-600 lg:text-base">
-                  System Availability
-                </div>
-              </div>
-              <div class="text-center">
-                <div class="text-4xl font-bold text-slate-900 lg:text-5xl">
-                  7 Days
-                </div>
-                <div class="mt-2 text-sm text-slate-600 lg:text-base">
-                  Average Resolution
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section
-          class="py-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900"
-        >
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-              <h2
-                class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
-              >
-                Ready to Get Started?
-              </h2>
-              <p class="mt-4 text-lg text-slate-300">
-                Join thousands of satisfied users who have resolved their
-                grievances through our platform
-              </p>
-              <div
-                class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6"
-              >
-                <button
-                  onclick="navigateToSection('user')"
-                  class="group relative overflow-hidden rounded-lg bg-white px-8 py-4 text-slate-900 shadow-lg transition-all duration-300 hover:bg-slate-100 hover:shadow-xl hover:scale-105"
-                >
-                  <div class="relative flex items-center space-x-2">
-                    <i class="fas fa-edit"></i>
-                    <span class="font-medium">Submit Your Grievance</span>
+                
+                <!-- Progress Bar -->
+                <div class="px-6 py-4 bg-slate-50">
+                  <div class="flex items-center">
+                    <div id="step1Dot" class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white text-sm font-medium">1</div>
+                    <div id="step1Line" class="flex-1 h-1 mx-2 bg-slate-300"></div>
+                    <div id="step2Dot" class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-300 text-slate-500 text-sm font-medium">2</div>
+                    <div id="step2Line" class="flex-1 h-1 mx-2 bg-slate-300"></div>
+                    <div id="step3Dot" class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-300 text-slate-500 text-sm font-medium">3</div>
                   </div>
-                </button>
-
-                <button
-                  onclick="navigateToSection('user')"
-                  class="group flex items-center space-x-2 rounded-lg border border-slate-600 bg-transparent px-8 py-4 text-white transition-all duration-300 hover:border-slate-400 hover:bg-slate-800"
-                >
-                  <i class="fas fa-search"></i>
-                  <span class="font-medium">Track Existing Grievance</span>
-                </button>
+                </div>
+                
+                <!-- Form Content -->
+                <div class="p-6">
+                  <!-- Step 1: Employee Code/PAN -->
+                  <div id="loginStep1" class="step-form">
+                    <div class="space-y-4">
+                      <div>
+                        <label for="employeeCodePan" class="block text-sm font-medium text-slate-700 mb-2">
+                          Employee Code or PAN *
+                        </label>
+                        <div class="relative">
+                          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-id-card text-slate-400"></i>
+                          </div>
+                          <input
+                            type="text"
+                            id="employeeCodePan"
+                            name="employeeCodePan"
+                            required
+                            maxlength="10"
+                            placeholder="Employee Code or PAN"
+                            oninput="this.value = this.value.toUpperCase()"
+                            style="outline: none !important; box-shadow: none !important;"
+                            class="block w-full pl-10 pr-3 py-3 border border-slate-300 rounded-lg shadow-sm 
+                                   focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:ring-offset-transparent
+                                   bg-white text-slate-900 placeholder-slate-400 
+                                   autofill:shadow-[inset_0_0_0px_1000px_rgba(255,255,255,0.7)] autofill:[-webkit-text-fill-color:#1e293b]"
+                          />
+                        </div>
+                        <p id="step1Error" class="mt-2 text-sm text-red-600 hidden">
+                          Please enter a valid Employee Code or PAN
+                        </p>
+                        <p class="mt-1 text-xs text-slate-500">Test with: CIL123</p>
+                      </div>
+                      
+                      <!-- Primary button -->
+                      <button
+                        type="button"
+                        id="verifyUserButton"
+                        class="w-full flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors font-medium"
+                      >
+                        <i class="fas fa-shield-check mr-2"></i>
+                        Verify User
+                      </button>
+                
+                      <!-- Secondary button -->
+                      <div class="text-center pt-2">
+                        <a
+                          href="#"
+                          onclick="switchToAdmin()"
+                          class="inline-flex items-center px-6 py-2 rounded-full text-sm font-medium
+                                 bg-white/30 backdrop-blur-md border border-white/40 
+                                 text-slate-700 shadow-md
+                                 hover:bg-white/40 hover:text-slate-900 
+                                 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]
+                                 transition-all duration-300 ease-in-out"
+                        >
+                          <i class="fas fa-arrows-rotate mr-2"></i>
+                          Admin Panel
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Step 2: Mobile Number -->
+                  <div id="loginStep2" class="step-form hidden">
+                    <div class="space-y-4">
+                      <div>
+                        <label for="mobileNumber" class="block text-sm font-medium text-slate-700 mb-2">
+                          Mobile Number *
+                        </label>
+                        <div class="relative">
+                          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-mobile-screen-button text-slate-400"></i>
+                          </div>
+                          <input
+                            type="tel"
+                            id="mobileNumber"
+                            name="mobileNumber"
+                            required
+                            maxlength="10"
+                            placeholder="Enter 10-digit mobile number"
+                            style="outline: none !important; box-shadow: none !important;"
+                            class="block w-full pl-10 pr-3 py-3 border border-slate-300 rounded-lg shadow-sm 
+                                   focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:ring-offset-transparent
+                                   bg-white text-slate-900 placeholder-slate-400
+                                   autofill:shadow-[inset_0_0_0px_1000px_rgba(255,255,255,0.3)] autofill:[-webkit-text-fill-color:#1e293b]"
+                          />
+                        </div>
+                        <p id="step2Error" class="mt-2 text-sm text-red-600 hidden">
+                          Please enter a valid 10-digit mobile number
+                        </p>
+                        <p class="mt-1 text-xs text-slate-500">Test with: 9876543210</p>
+                      </div>
+                      
+                      <button
+                        type="button"
+                        id="generateOtpButton"
+                        class="w-full flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors font-medium"
+                      >
+                        <i class="fas fa-key mr-2"></i>
+                        Generate OTP
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <!-- Step 3: OTP Verification -->
+                  <div id="loginStep3" class="step-form hidden">
+                    <div class="space-y-4">
+                      <div>
+                        <label for="otp" class="block text-sm font-medium text-slate-700 mb-2">
+                          Enter OTP *
+                        </label>
+                        <div class="relative">
+                          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-lock text-slate-400"></i>
+                          </div>
+                          <input
+                            type="text"
+                            id="otp"
+                            name="otp"
+                            required
+                            maxlength="6"
+                            placeholder="Enter 6-digit OTP"
+                            style="outline: none !important; box-shadow: none !important;"
+                            class="block w-full pl-10 pr-3 py-3 border border-slate-300 rounded-lg shadow-sm 
+                                   focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:ring-offset-transparent
+                                   bg-white text-slate-900 placeholder-slate-400
+                                   autofill:shadow-[inset_0_0_0px_1000px_rgba(255,255,255,0.3)] autofill:[-webkit-text-fill-color:#1e293b]"
+                          />
+                        </div>
+                        <p id="step3Error" class="mt-2 text-sm text-red-600 hidden">
+                          Please enter a valid 6-digit OTP
+                        </p>
+                        <p class="mt-1 text-xs text-slate-500">
+                          OTP sent to your registered mobile number
+                        </p>
+                        <p class="text-xs text-slate-500">Test with: 123456</p>
+                      </div>
+                      
+                      <button
+                        type="button"
+                        id="verifyOtpButton"
+                        class="w-full flex items-center justify-center px-4 py-3 bg-green-600 text-white rounded-full shadow-md hover:bg-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors font-medium"
+                      >
+                        <i class="fas fa-right-to-bracket mr-2"></i>
+                        Verify OTP and Login
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <!-- Back button for steps 2 and 3 -->
+                  <div id="backButtonContainer" class="mt-4 hidden">
+                    <button
+                      type="button"
+                      id="backButton"
+                      class="inline-flex items-center px-6 py-2 rounded-full text-sm font-medium
+                             bg-white/30 backdrop-blur-md border border-white/40 
+                             text-slate-700 shadow-md
+                             hover:bg-white/40 hover:text-slate-900 
+                             hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]
+                             transition-all duration-300 ease-in-out"
+                    >
+                      <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                  </div>
+                </div>
+                
               </div>
-            </div>
+            </aside>
+            
+
+            <!-- HERO (bottom on mobile, left on desktop) -->
+            <section class="order-2 lg:order-1 lg:flex-1 lg:h-full lg:flex lg:items-center">
+              <!-- Hero Section -->
+              <section
+                class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 py-12 lg:py-20"
+              >
+                <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+                  <div class="mx-auto max-w-4xl text-center">
+                    <h1
+                      class="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl"
+                    >
+                      Welcome to
+                      <span
+                        class="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
+                      >
+                        e-Nivaran
+                      </span>
+                    </h1>
+
+                    <div
+                      class="mt-8 space-y-6 text-base leading-7 text-slate-600 sm:text-lg lg:text-xl"
+                    >
+                      <p>
+                        e-Nivaran is a dedicated online platform launched by Coal
+                        India Limited (CIL) for facilitating the redressal of
+                        grievances submitted by separated employees and their
+                        dependents. This initiative aims to provide a transparent,
+                        efficient, and timely grievance resolution mechanism. Through
+                        this portal, former employees of CIL and its subsidiaries can
+                        register their concerns directly with the relevant subsidiary
+                        company. The portal ensures real-time tracking of grievance
+                        status, with regular updates communicated via SMS and email.
+                      </p>
+                      <p>
+                        To register a grievance, users may log in using their Employee
+                        Number or PAN Number and authenticate via a One-Time Password
+                        (OTP) sent to their registered mobile number. If login
+                        credentials are unavailable, users may fill out a registration
+                        form by providing details of their last posting. Upon
+                        verification, the respective subsidiary nodal officer will
+                        approve the registration.
+                      </p>
+                      <p>
+                        This platform reflects CIL's commitment to supporting and
+                        addressing the concerns of its former workforce with
+                        accountability and responsiveness.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
           </div>
-        </section>
+        </div>
       </main>
     </div>
 
@@ -362,10 +338,18 @@
     <!-- Scripts -->
     <script src="script.js"></script>
     <script>
+      // Simulated authentication status
+      const isLoggedIn = false; // Change to true if user is authenticated
+
       // Load components
       document.addEventListener('DOMContentLoaded', function () {
         loadComponent('header.html', 'header-container');
-        loadComponent('sidebar.html', 'sidebar-container');
+
+        // Only load sidebar if user is logged in
+        if (isLoggedIn) {
+          loadComponent('sidebar.html', 'sidebar-container');
+        }
+
         loadComponent('footer.html', 'footer-container');
 
         // Animate stats
@@ -387,8 +371,8 @@
         const stat1 = document.getElementById('stat1');
         const stat2 = document.getElementById('stat2');
 
-        animateNumber(stat1, 1000, '+');
-        animateNumber(stat2, 95, '%');
+        if (stat1) animateNumber(stat1, 1000, '+');
+        if (stat2) animateNumber(stat2, 95, '%');
       }
 
       function animateNumber(element, target, suffix = '') {
@@ -404,7 +388,7 @@
         }, 20);
       }
 
-      // Update navigateToSection logic in your script.js
+      // Navigation helper function
       function navigateToSection(section) {
         if (section === 'user') {
           // Redirect to User form/page
@@ -415,5 +399,189 @@
         }
       }
     </script>
-  </body>
+
+    <!-- Login Form JavaScript -->
+    <script>
+      let currentStep = 1;
+
+      function showStep(step) {
+        currentStep = step;
+
+        // Hide all steps
+        document.querySelectorAll('.step-form').forEach((form) => {
+          form.classList.add('hidden');
+        });
+
+        // Show current step
+        document.getElementById(`loginStep${step}`).classList.remove('hidden');
+
+        // Update progress indicator
+        document.getElementById(
+          'stepIndicator'
+        ).textContent = `Step ${step} of 3`;
+
+        // Update progress dots
+        updateProgressDots(step);
+
+        // Show/hide back button
+        const backContainer = document.getElementById('backButtonContainer');
+        if (step > 1) {
+          backContainer.classList.remove('hidden');
+        } else {
+          backContainer.classList.add('hidden');
+        }
+      }
+
+      function updateProgressDots(step) {
+        // Reset all dots and lines
+        for (let i = 1; i <= 3; i++) {
+          const dot = document.getElementById(`step${i}Dot`);
+          const line = document.getElementById(`step${i}Line`);
+
+          if (i <= step) {
+            dot.className =
+              'flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white text-sm font-medium';
+            if (line) line.className = 'flex-1 h-1 mx-2 bg-blue-600';
+          } else {
+            dot.className =
+              'flex items-center justify-center w-8 h-8 rounded-full bg-slate-300 text-slate-500 text-sm font-medium';
+            if (line) line.className = 'flex-1 h-1 mx-2 bg-slate-300';
+          }
+        }
+      }
+
+      function nextStep() {
+        clearAllErrors();
+        if (currentStep < 3) {
+          showStep(currentStep + 1);
+        }
+      }
+
+      function previousStep() {
+        if (currentStep > 1) {
+          clearAllErrors();
+          showStep(currentStep - 1);
+        }
+      }
+
+      function showError(errorId, message = null) {
+        const errorEl = document.getElementById(errorId);
+        if (message) {
+          errorEl.textContent = message;
+        }
+        errorEl.classList.remove('hidden');
+      }
+
+      function clearAllErrors() {
+        ['step1Error', 'step2Error', 'step3Error'].forEach((id) => {
+          document.getElementById(id).classList.add('hidden');
+        });
+      }
+
+      function switchToAdmin() {
+        alert('Admin login functionality to be implemented');
+      }
+
+      // Form validation and submission
+      document.addEventListener('DOMContentLoaded', function () {
+        // Initialize with step 1
+        showStep(1);
+
+        // Step 1: Verify User
+        document
+          .getElementById('verifyUserButton')
+          .addEventListener('click', function () {
+            const employeeCode = document
+              .getElementById('employeeCodePan')
+              .value.trim();
+
+            clearAllErrors();
+
+            if (!employeeCode) {
+              showError('step1Error', 'Employee Code or PAN is required');
+              return;
+            }
+
+            // Mock validation - replace with actual API call
+            if (employeeCode === 'CIL123') {
+              nextStep();
+            } else {
+              showError(
+                'step1Error',
+                'Invalid Employee Code or PAN. Try CIL123 for testing.'
+              );
+            }
+          });
+
+        // Step 2: Generate OTP
+        document
+          .getElementById('generateOtpButton')
+          .addEventListener('click', function () {
+            const mobileNumber = document
+              .getElementById('mobileNumber')
+              .value.trim();
+
+            clearAllErrors();
+
+            if (!/^\d{10}$/.test(mobileNumber)) {
+              showError(
+                'step2Error',
+                'Please enter a valid 10-digit mobile number'
+              );
+              return;
+            }
+
+            // Mock validation - replace with actual API call
+            if (mobileNumber === '9876543210') {
+              nextStep();
+            } else {
+              showError(
+                'step2Error',
+                'Invalid mobile number. Try 9876543210 for testing.'
+              );
+            }
+          });
+
+        // Step 3: Verify OTP
+        document
+          .getElementById('verifyOtpButton')
+          .addEventListener('click', function () {
+            const otp = document.getElementById('otp').value.trim();
+
+            clearAllErrors();
+
+            if (!/^\d{6}$/.test(otp)) {
+              showError('step3Error', 'Please enter a valid 6-digit OTP');
+              return;
+            }
+
+            // Mock validation - replace with actual API call
+            if (otp === '123456') {
+              // Success - redirect to dashboard
+              alert('Login successful! Redirecting to dashboard...');
+              window.location.href = 'dashboard.html';
+            } else {
+              showError('step3Error', 'Invalid OTP. Try 123456 for testing.');
+            }
+          });
+
+        // Back button
+        document
+          .getElementById('backButton')
+          .addEventListener('click', previousStep);
+
+        // Enter key support
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            const currentForm = document.getElementById(
+              `loginStep${currentStep}`
+            );
+            const button = currentForm.querySelector('button[type="button"]');
+            if (button) button.click();
+          }
+        });
+      });
+    </script>
+</body>
 </html>
