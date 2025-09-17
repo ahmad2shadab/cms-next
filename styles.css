@@ -1319,3 +1319,27 @@ html.dark {
     font-size: var(--font-size-xs);
   }
 }
+/*
+================================================================================
+|   Fixed Footer Styles                                                        |
+================================================================================
+*/
+
+/* 1. Make the footer fixed to the bottom of the viewport */
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50; /* Keeps it above other content */
+}
+
+/* 2. Add padding to the bottom of the body to prevent content from being hidden by the footer.
+      The padding should match the footer's height (h-16 = 4rem). */
+body {
+  padding-bottom: 4rem; 
+}
+/* Hides the mobile menu container specifically on the index page */
+.page-index #mobile-menu-container {
+  display: none;
+}
