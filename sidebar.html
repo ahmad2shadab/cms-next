@@ -1,8 +1,5 @@
-<!-- Sidebar Component -->
-<aside id="sidebar" class="fixed left-0 top-16 z-40 h-[calc(100vh-4rem)] w-64 -translate-x-full transform border-r bg-background transition-transform duration-300 ease-in-out lg:translate-x-0">
-    <!-- Sidebar Content -->
+<aside id="sidebar" class="fixed left-0 top-16 lg:top-20 z-40 h-[calc(100vh-9rem)] w-64 -translate-x-full transform border-r bg-background transition-transform duration-300 ease-in-out lg:translate-x-0">
     <div class="flex h-full flex-col overflow-y-auto">
-        <!-- User Profile Section -->
         <div class="border-b p-6">
             <div class="flex items-center space-x-3">
                 <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
@@ -18,114 +15,54 @@
             </div>
         </div>
         
-        <!-- Navigation Menu -->
         <nav class="flex-1 space-y-2 p-4">
-            <!-- Dashboard -->
-            <div class="space-y-1">
-                <a href="/dashboard.html" onclick="navigateToSection('dashboard')" class="nav-item group flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <i class="fas fa-chart-bar mr-3 h-4 w-4 text-muted-foreground group-hover:text-accent-foreground"></i>
-                    Dashboard
-                </a>
-            </div>
+            <a href="dashboard.html" class="nav-item group flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                <i class="fas fa-chart-bar mr-3 h-4 w-4"></i>
+                Dashboard
+            </a>
             
-            <!-- Grievance Management -->
-            <div class="space-y-1">
-                <div class="px-3 py-2">
-                    <h3 class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                        Grievance Management
-                    </h3>
-                </div>
-                
-                <a href="/register.html" onclick="navigateToSection('register')" class="nav-item group flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <i class="fas fa-plus-circle mr-3 h-4 w-4 text-green-500 group-hover:text-accent-foreground"></i>
+            <div class="pt-4 space-y-1">
+                <h3 class="px-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Grievance Management
+                </h3>
+                <a href="register.html" class="nav-item group flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                    <i class="fas fa-plus-circle mr-3 h-4 w-4 text-green-500"></i>
                     New Grievance
                 </a>
-                
-                <a href="/dashboard.html" class="nav-item group flex items-center justify-between rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <div class="flex items-center">
-                        <i class="fas fa-clock mr-3 h-4 w-4 text-yellow-500 group-hover:text-accent-foreground"></i>
-                        Pending Grievances
-                    </div>
-                    <span class="inline-flex items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
-                        12
-                    </span>
-                </a>
-                
-                <a href="dashboard.html" class="nav-item group flex items-center justify-between rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <div class="flex items-center">
-                        <i class="fas fa-spinner mr-3 h-4 w-4 text-blue-500 group-hover:text-accent-foreground"></i>
-                        In Process
-                    </div>
-                    <span class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                        5
-                    </span>
-                </a>
-                
-                <a href="dashboard.html" class="nav-item group flex items-center justify-between rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle mr-3 h-4 w-4 text-green-500 group-hover:text-accent-foreground"></i>
-                        Resolved
-                    </div>
-                    <span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-                        28
-                    </span>
-                </a>
-                <a href="dashboard.html" class="nav-item group flex items-center justify-between rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <div class="flex items-center">
-                        <i class="fa-solid fa-history mr-3 h-4 w-4 text-slate-500 group-hover:text-accent-foreground"></i>
-                        Grievance History
-                    </div>
-                    <span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-                        90
-                    </span>
+                <a href="grievance-history.html" class="nav-item group flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                    <i class="fas fa-list-ul mr-3 h-4 w-4"></i>
+                    Grievance History
                 </a>
             </div>
-            
-            <!-- Reports & Analytics -->
-            <!-- <div class="space-y-1">
-                <div class="px-3 py-2">
-                    <h3 class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                        Reports & Analytics
-                    </h3>
-                </div>
-                
-                <a href="#" class="nav-item group flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <i class="fas fa-chart-line mr-3 h-4 w-4 text-purple-500 group-hover:text-accent-foreground"></i>
-                    Analytics
+
+             <div class="pt-4 space-y-1">
+                 <h3 class="px-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Tracking
+                </h3>
+                <a href="dashboard.html#pending" class="nav-item group flex items-center justify-between rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                    <div class="flex items-center">
+                        <i class="fas fa-clock mr-3 h-4 w-4 text-yellow-500"></i>
+                        Pending
+                    </div>
+                    <span class="inline-flex items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">12</span>
                 </a>
-                
-                <a href="#" class="nav-item group flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <i class="fas fa-file-alt mr-3 h-4 w-4 text-indigo-500 group-hover:text-accent-foreground"></i>
-                    Reports
+                <a href="dashboard.html#in-process" class="nav-item group flex items-center justify-between rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                    <div class="flex items-center">
+                        <i class="fas fa-spinner mr-3 h-4 w-4 text-blue-500"></i>
+                        In Process
+                    </div>
+                    <span class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">5</span>
                 </a>
-                
-                <a href="#" class="nav-item group flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <i class="fas fa-download mr-3 h-4 w-4 text-teal-500 group-hover:text-accent-foreground"></i>
-                    Export Data
+                <a href="dashboard.html#resolved" class="nav-item group flex items-center justify-between rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle mr-3 h-4 w-4 text-green-500"></i>
+                        Resolved
+                    </div>
+                    <span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">28</span>
                 </a>
-            </div> -->
-            
-            <!-- Settings -->
-            <div class="space-y-1">
-                <div class="px-3 py-2">
-                    <h3 class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                        Settings
-                    </h3>
-                </div>
-                
-                <a href="#" class="nav-item group flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <i class="fas fa-user-cog mr-3 h-4 w-4 text-gray-500 group-hover:text-accent-foreground"></i>
-                    Profile
-                </a>
-                
-                <!-- <a href="#" class="nav-item group flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
-                    <i class="fas fa-cog mr-3 h-4 w-4 text-gray-500 group-hover:text-accent-foreground"></i>
-                    System Settings
-                </a> -->
             </div>
         </nav>
         
-        <!-- Bottom Actions -->
         <div class="border-t p-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
@@ -145,7 +82,6 @@
     </div>
 </aside>
 
-<!-- Sidebar Overlay for Mobile -->
 <div id="sidebarOverlay" class="fixed inset-0 z-30 bg-black/50 lg:hidden" style="display: none;" onclick="closeSidebar()"></div>
 
 <script>
@@ -196,24 +132,44 @@ function closeSidebar() {
     }
 }
 
+/**
+ * MODIFIED: Implemented the logic to highlight the active navigation link.
+ */
 function updateActiveNavItem() {
-    // Remove active class from all nav items
-    document.querySelectorAll('.nav-item').forEach(item => {
-        item.classList.remove('bg-accent', 'text-accent-foreground');
+    const currentPath = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('#sidebar .nav-item');
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href').split('/').pop();
+        
+        // Remove any existing active classes
+        link.classList.remove('bg-accent', 'text-accent-foreground');
+        link.querySelector('i')?.classList.remove('text-accent-foreground');
+
+        // Check for a match
+        // Handles the case where the root path should default to the dashboard
+        if ((currentPath === '' || currentPath === 'index.html' || currentPath === 'dashboard.html') && linkPath.includes('dashboard.html')) {
+             link.classList.add('bg-accent', 'text-accent-foreground');
+             link.querySelector('i')?.classList.add('text-accent-foreground');
+        } else if (currentPath !== '' && linkPath !== '' && currentPath.includes(linkPath)) {
+             link.classList.add('bg-accent', 'text-accent-foreground');
+             link.querySelector('i')?.classList.add('text-accent-foreground');
+        }
     });
-    
-    // Add active class to current nav item based on current section
-    // This would be implemented based on your routing system
 }
 
 // Handle mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // This logic should be in your main script.js, but is included here for completeness
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', toggleSidebar);
     }
     
-    // Close sidebar on window resize if desktop
+    // Initialize the sidebar state on page load
+    initializeSidebar();
+    
+    // Close sidebar on window resize if switching to desktop view
     window.addEventListener('resize', function() {
         if (window.innerWidth >= 1024) {
             closeSidebar();

@@ -214,7 +214,7 @@
                             
                             <div class="space-y-2">
                                 <label for="description" class="text-sm font-medium text-foreground">
-                                    Detailed Description *
+                                    Detailed Description <span class="text-red-500">*</span>
                                 </label>
                                 <textarea
                                     id="description"
@@ -222,7 +222,7 @@
                                     required
                                     rows="6"
                                     maxlength="2000"
-                                    class="flex min-h-[60px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-none"
+                                    class="flex min-h-[60px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-gray-600 shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-none"
                                     placeholder="Provide detailed description of your grievance, including any relevant dates, amounts, or reference numbers..."
                                 ></textarea>
                                 <p class="text-xs text-muted-foreground">Maximum 2000 characters</p>
