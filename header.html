@@ -2,49 +2,44 @@
   id="mainHeader"
   class="fixed top-0 left-0 right-0 z-50 w-full border-b bg-background/85 backdrop-blur-sm transition-all duration-300"
 >
-  <div class="relative flex h-16 items-center sm:h-24">
-    <div class="absolute left-4 sm:left-6 lg:left-8">
-      <a href="index.html" class="flex-shrink-0">
-        <img
-          src="https://d3u7ubx0okog7j.cloudfront.net/images/cil_new_logo1.original.png"
-          alt="Coal India Limited Logo"
-          class="h-12 w-auto object-contain sm:h-20"
-        />
-      </a>
-    </div>
+  <div class="px-4 sm:px-6 lg:px-8">
+    <div class="relative h-16 sm:h-18 lg:h-20 flex items-center">
+      <div class="absolute left-0">
+        <a href="index.html" class="flex-shrink-0">
+          <img
+            src="https://d3u7ubx0okog7j.cloudfront.net/images/cil_new_logo1.original.png"
+            alt="Coal India Limited Logo"
+            class="h-12 sm:h-14 lg:h-16 w-auto object-contain"
+          />
+        </a>
+      </div>
 
-    <div class="container mx-auto text-center">
-      <h1
-        class="text-2xl font-bold tracking-tight text-transparent sm:text-4xl bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text"
-      >
-        e-Nivaran
-      </h1>
-      <p
-        class="mt-1 hidden text-xs text-muted-foreground sm:block sm:text-base"
-      >
-        Ex-Employee Grievance Management System
-      </p>
-    </div>
+      <div class="mx-auto text-center px-4">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
+          e-Nivaran
+        </h1>
+        <p class="hidden sm:block mt-1 text-xs sm:text-sm lg:text-base text-muted-foreground">
+          Ex-Employee Grievance Management System
+        </p>
+      </div>
 
-    <div
-      id="mobile-menu-container"
-      class="absolute right-4 sm:right-6 lg:right-8 lg:hidden"
-    >
-      <button
-        id="mobileMenuToggle"
-        class="p-2 rounded-md text-muted-foreground transition-colors hover:bg-accent/20 hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-      >
-        <i class="fas fa-bars h-5 w-5"></i>
-        <span class="sr-only">Open menu</span>
-      </button>
+      <div id="mobile-menu-container" class="absolute right-0 sm:right-2 lg:hidden">
+        <button
+          id="mobileMenuToggle"
+          class="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent/20 focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
+        >
+          <i class="fas fa-bars h-5 w-5"></i>
+          <span class="sr-only">Open menu</span>
+        </button>
+      </div>
     </div>
   </div>
 </header>
 
-<div class="pt-16 sm:pt-24"></div>
+<div class="pt-16 sm:pt-18 lg:pt-20"></div>
 
 <script>
-  // No changes needed to the script
+  // Header initialization
   function initializeHeader() {
     const header = document.getElementById('mainHeader');
 
