@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register New Grievance - e-Nivaran</title>
     
-    <!-- External Libraries -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -48,18 +47,13 @@
 </head>
 
 <body class="min-h-screen bg-background font-sans antialiased">
-    <!-- Header -->
     <div id="header-container"></div>
     
-    <!-- Main Layout -->
     <div class="flex">
-        <!-- Sidebar -->
         <div id="sidebar-container"></div>
         
-        <!-- Main Content -->
         <main class="flex-1 lg:ml-64 transition-all duration-300 ease-in-out">
             <div class="p-4 sm:p-6 lg:p-8">
-                <!-- Page Header -->
                 <div class="mb-6 sm:mb-8">
                     <div class="rounded-lg border bg-card p-4 sm:p-6 shadow-sm">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-3 sm:space-y-0">
@@ -74,9 +68,7 @@
                     </div>
                 </div>
 
-                <!-- Registration Form -->
                 <form id="grievanceForm" class="space-y-6 sm:space-y-8">
-                    <!-- Employment Details -->
                     <div class="rounded-lg border bg-card p-4 sm:p-6 shadow-sm">
                         <div class="mb-4 sm:mb-6 flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-2 sm:space-y-0">
                             <div class="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-green-100 dark:bg-green-900">
@@ -94,7 +86,7 @@
                                     id="subsidiary"
                                     name="subsidiary"
                                     required
-                                    class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-slate-900 shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                                    class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-slate-900 shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                                 >
                                     <option value="">Select Subsidiary</option>
                                     <option value="ECL">Eastern Coalfields Limited (ECL)</option>
@@ -115,7 +107,7 @@
                                     id="area"
                                     name="area"
                                     required
-                                    class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-slate-900 shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                                    class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-slate-900 shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                                 >
                                     <option value="">Select Area/Unit</option>
                                 </select>
@@ -130,7 +122,7 @@
                                     id="designation"
                                     name="designation"
                                     required
-                                    class="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                                    class="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors text-accent-foreground file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                                     placeholder="Enter your last designation"
                                 />
                             </div>
@@ -143,7 +135,7 @@
                                     id="department"
                                     name="department"
                                     required
-                                    class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-slate-900 shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                                    class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-slate-900 shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                                 >
                                     <option value="">Select Department</option>
                                     <option value="mining">Mining</option>
@@ -160,7 +152,6 @@
                         </div>
                     </div>
 
-                    <!-- Grievance Details -->
                     <div class="rounded-lg border bg-card p-4 sm:p-6 shadow-sm">
                         <div class="mb-4 sm:mb-6 flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-2 sm:space-y-0">
                             <div class="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-orange-100 dark:bg-orange-900">
@@ -179,7 +170,7 @@
                                         id="category"
                                         name="category"
                                         required
-                                        class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-slate-900 shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                                        class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-slate-900 shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                                     >
                                         <option value="">Select Category</option>
                                         <option value="pension">Pension Related</option>
@@ -201,7 +192,7 @@
                                         id="priority"
                                         name="priority"
                                         required
-                                        class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-slate-900 shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                                        class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-slate-900 shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                                     >
                                         <option value="">Select Priority</option>
                                         <option value="low">Low</option>
@@ -222,7 +213,7 @@
                                     required
                                     rows="6"
                                     maxlength="2000"
-                                    class="flex min-h-[60px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-gray-600 shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-none"
+                                    class="flex min-h-[60px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-accent-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-none"
                                     placeholder="Provide detailed description of your grievance, including any relevant dates, amounts, or reference numbers..."
                                 ></textarea>
                                 <p class="text-xs text-muted-foreground">Maximum 2000 characters</p>
@@ -230,7 +221,6 @@
                         </div>
                     </div>
 
-                    <!-- Supporting Documents -->
                     <div class="rounded-lg border bg-card p-4 sm:p-6 shadow-sm">
                         <div class="mb-4 sm:mb-6 flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-2 sm:space-y-0">
                             <div class="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900">
@@ -267,7 +257,6 @@
                         </div>
                     </div>
 
-                    <!-- Form Actions -->
                     <div class="flex flex-col gap-3 sm:gap-4 pt-4 sm:pt-6 sm:flex-row sm:justify-end">
                         <button
                             type="button"
@@ -291,10 +280,8 @@
         </main>
     </div>
     
-    <!-- Footer -->
     <div id="footer-container" class="lg:ml-64"></div>
     
-    <!-- Scripts -->
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
