@@ -158,7 +158,7 @@ require_once 'config.php';
 The responsive behavior is handled entirely by the frontend assets and requires no extra PHP logic.
 
   * **CSS (`style.css`)**: Manages the mobile-first layout, the fixed positioning of the header/footer, and the responsive transition of the sidebar from off-canvas (mobile) to fixed (desktop).
-  * **JavaScript (`script.js`)**: Handles all user interactions, including:
+  * **JavaScript (`script.js`)**: Handles all user interactions, including below:
       * Toggling the mobile sidebar.
       * The logic for the 3-step login form on `index.php`.
       * Initializing charts and animations on `dashboard.php`.
