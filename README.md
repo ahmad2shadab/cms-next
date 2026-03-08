@@ -21,7 +21,7 @@ The frontend is built with **Tailwind CSS** and vanilla **JavaScript**, designed
 To ensure that paths work correctly and the project remains maintainable, organize the provided files into the following structure within your PHP application's root directory.
 
 ```
-/your-php-project:
+/your-php-project
 │
 ├── index.php
 ├── dashboard.php
