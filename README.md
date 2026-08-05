@@ -6,7 +6,7 @@ The frontend is built with **Tailwind CSS** and vanilla **JavaScript**, designed
 
 -----
 
-## ✨ Features:
+## ✨ Features
 
   * **Modular Partials**: Reusable Header, Sidebar, and Footer components.
   * **Responsive Design**: Mobile-first layout that adapts from small phones to large desktops.
