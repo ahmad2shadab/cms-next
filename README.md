@@ -6,7 +6,7 @@ The frontend is built with **Tailwind CSS** and vanilla **JavaScript**, designed
 
 -----
 
-## ✨ Features
+## Features
 
   * **Modular Partials**: Reusable Header, Sidebar, and Footer components.
   * **Responsive Design**: Mobile-first layout that adapts from small phones to large desktops.
@@ -16,7 +16,7 @@ The frontend is built with **Tailwind CSS** and vanilla **JavaScript**, designed
 
 -----
 
-## 📁 1. Recommended Folder Structure
+## 1. Recommended Folder Structure
 
 To ensure that paths work correctly and the project remains maintainable, organize the provided files into the following structure within your PHP application's root directory.
 
