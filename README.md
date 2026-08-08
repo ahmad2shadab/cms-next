@@ -42,7 +42,7 @@ To ensure that paths work correctly and the project remains maintainable, organi
 
 -----
 
-## 🛠️ 2. Step-by-Step Integration Guide
+## 2. Step-by-Step Integration Guide
 
 Follow these steps carefully to integrate the frontend component.
 
